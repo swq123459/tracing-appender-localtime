@@ -7,7 +7,7 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/tokio-rs/tracing"
+repository = "https://github.com/swq123459/tracing-appender-localtime.git"
 homepage = "https://tokio.rs"
 description = """
 tracing-appender baseon localtime

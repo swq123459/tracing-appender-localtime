@@ -1,6 +1,6 @@
 [package]
 name = "tracing-appender-localtime"
-version = "0.2.3"
+version = "0.2.4"
 authors = [
     "Zeki Sherif <zekshi@amazon.com>",
     "Tokio Contributors <team@tokio.rs>"
@@ -8,9 +8,8 @@ authors = [
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/swq123459/tracing-appender-localtime.git"
-homepage = "https://tokio.rs"
 description = """
-tracing-appender baseon localtime
+tracing-appender base on localtime (chrono)
 """
 categories = [
     "development-tools::debugging",

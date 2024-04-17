@@ -25,6 +25,7 @@ crossbeam-channel = "0.5.6"
 time = { version = "0.3.2", default-features = false, features = ["formatting", "parsing", "local-offset"] }
 parking_lot = { optional = true, version = "0.12.1" }
 thiserror = "1"
+chrono = "0.4.38"
 
 [dependencies.tracing-subscriber]
 # path = "../tracing-subscriber"

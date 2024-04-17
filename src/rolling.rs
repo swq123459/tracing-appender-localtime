@@ -190,12 +190,16 @@ impl RollingFileAppender {
             ref suffix,
             ref max_files,
         } = builder;
-        let directory = directory.as_ref().to_path_buf();
 
-        let t = OffsetDateTime::now_utc();
-        let offset = time::UtcOffset::local_offset_at(t).expect("Get localtime offset failed");
-        // println!("offset is {:?}", offset);
+        use chrono::Local;
+
+        let directory = directory.as_ref().to_path_buf();
+        let offset_in_sec = Local::now().offset().local_minus_utc();
+        let offset = time::UtcOffset::from_whole_seconds(offset_in_sec)
+            .expect("Get localtime offset failed");
         let now = OffsetDateTime::now_utc().to_offset(offset);
+        // println!("offset is {:?}", now);
+
         let (state, writer) = Inner::new(
             now,
             rotation.clone(),
